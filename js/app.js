@@ -36,16 +36,40 @@ document.addEventListener('keydown', (e) => {
         }
     });
 
-/*let menuItem = document.querySelectorAll(".menu__item");
-let submenu = document.querySelectorAll(".submenu");
+let menuItem = document.querySelectorAll(".menu__link");
+let submenu = document.querySelector(".submenu");
 
 menuItem.forEach(item => {
     item.addEventListener("click", (e => {
         submenu.classList.toggle("active");    
     }))
 }
-); */
-document.querySelectorAll('.menu__item').forEach(item => {
+); 
+
+
+
+let accordion = document.querySelector('.menu__list');
+  let items = accordion.querySelectorAll('.menu__item');
+  let title = accordion.querySelectorAll('.menu__link');
+  
+  function toggleAccordion() {
+    let thisItem = this.parentNode;
+    
+    items.forEach(item => {
+      if (thisItem == item ) {
+        // if this item is equal to the clicked item, open it.
+        thisItem.classList.toggle('active');
+        return;
+      } 
+      // otherwise, remove the open class
+      item.classList.remove('active');
+    });
+  }
+  
+  title.forEach(question => question.addEventListener('click', toggleAccordion));
+
+
+/*document.querySelectorAll('.menu__link').forEach(item => {
     item.addEventListener('click', event => {
         event.preventDefault();
         let target = event.currentTarget;
@@ -53,7 +77,7 @@ document.querySelectorAll('.menu__item').forEach(item => {
         
     })
 
-}) 
+}) */
 let searchBtn = document.querySelector(".header__search");
 let dropdownSearch = document.querySelector(".dropdown-form");
 searchBtn.addEventListener("click", (e => {
