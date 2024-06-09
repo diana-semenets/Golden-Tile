@@ -36,7 +36,7 @@ document.addEventListener('keydown', (e) => {
         }
     });
 
-let menuItem = document.querySelectorAll(".menu__link");
+/*let menuItem = document.querySelectorAll(".menu__link");
 let submenu = document.querySelector(".submenu");
 
 menuItem.forEach(item => {
@@ -44,7 +44,7 @@ menuItem.forEach(item => {
         submenu.classList.toggle("active");    
     }))
 }
-); 
+); */
 
 
 
