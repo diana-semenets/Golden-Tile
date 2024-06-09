@@ -577,9 +577,9 @@ main {
   .menu__link {
     display: none;
   }
-  .menu__item:hover .submenu {
-    display: none;
-  }
+  /*   .menu__item:hover .submenu{
+         display: none;
+     } */
   .header__lang-list {
     margin-right: 60px;
   }
